@@ -12,6 +12,29 @@
   },
   "sections": [
     {
+      "id": "problem",
+      "type": "problem",
+      "hidden": false,
+      "eyebrow": "The problem",
+      "title": "AI agents are trained on tasks that look nothing like real work.",
+      "lead": "Most agent training and evaluation still runs on static prompts and benchmarks: one task, one answer, a world that stands still. Real work runs for hours or days, spans many systems and people, and keeps changing while the agent acts. Agents that score well on benchmarks break when they meet it.",
+      "points": [
+        {
+          "title": "Static tasks, moving world",
+          "body": "Benchmarks freeze the world. In real work, customers reply, policies change and records disagree while the agent is mid-task."
+        },
+        {
+          "title": "Plausible isn’t done",
+          "body": "Models are scored on answers that sound right. Real work is judged by its side effects: the issue resolved, every system consistent, no rule broken."
+        },
+        {
+          "title": "Easy to game, hard to scale",
+          "body": "Fixed tasks get memorized and weak reward signals get exploited. Hand-labeling long trajectories doesn’t scale."
+        }
+      ],
+      "bridge": "To learn real work, agents need to practice inside it."
+    },
+    {
       "id": "product",
       "type": "products",
       "hidden": false,

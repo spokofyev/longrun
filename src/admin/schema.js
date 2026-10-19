@@ -8,6 +8,16 @@ const pair = (title, body) => [
 ]
 
 export const SECTION_TYPES = {
+  problem: {
+    name: 'Problem',
+    fields: [
+      { key: 'eyebrow', label: 'Label above title' },
+      { key: 'title', label: 'Problem statement', kind: 'long' },
+      { key: 'lead', label: 'Explanation', kind: 'long' },
+      { key: 'points', label: 'Why it breaks', kind: 'items', itemName: 'Point', fields: pair('Point', 'Detail'), blank: { title: '', body: '' } },
+      { key: 'bridge', label: 'Closing line (leads into the product)', kind: 'long' },
+    ],
+  },
   properties: {
     name: 'Properties',
     fields: [

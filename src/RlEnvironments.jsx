@@ -6,6 +6,28 @@ import Glow, { CardGlow } from './Glow.jsx'
 
 const num = (i) => String(i + 1).padStart(2, '0')
 
+function Problem({ s }) {
+  return (
+    <section className="container section rl-problem">
+      {s.eyebrow && <p className="rl-eyebrow">{s.eyebrow}</p>}
+      <h2 className="rl-problem-title">{s.title}</h2>
+      {s.lead && <p className="rl-problem-lead">{s.lead}</p>}
+      {s.points?.length > 0 && (
+        <ol className="rl-problem-points">
+          {s.points.map((p, i) => (
+            <li key={i}>
+              <span className="rl-card-num">{num(i)}</span>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+            </li>
+          ))}
+        </ol>
+      )}
+      {s.bridge && <p className="rl-problem-bridge">{s.bridge}</p>}
+    </section>
+  )
+}
+
 function Properties({ s }) {
   return (
     <section className="container section">
@@ -222,6 +244,7 @@ function Pack({ s }) {
 }
 
 export const SECTION_COMPONENTS = {
+  problem: Problem,
   properties: Properties,
   team: Team,
   products: Products,

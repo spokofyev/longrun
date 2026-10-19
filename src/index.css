@@ -2877,3 +2877,56 @@ a.case-card:hover .case-art { transform: scale(1.03); }
 
 /* Product cards: the list follows the headline directly */
 .rl-products .client-list { margin-top: 28px; }
+
+/* Problem statement: the first thing after the hero */
+.rl-problem-title {
+  max-width: 18em;
+  font-size: clamp(32px, 4.4vw, 56px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.rl-problem-lead {
+  max-width: 40em;
+  margin-top: 24px;
+  font-size: clamp(18px, 1.6vw, 21px);
+  line-height: 1.55;
+  color: var(--body);
+}
+
+.rl-problem-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 56px;
+  list-style: none;
+}
+
+.rl-problem-points li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 2px solid;
+  border-image: linear-gradient(90deg, var(--accent), var(--accent-2)) 1;
+}
+
+.rl-problem-points .rl-card-num { margin-bottom: 4px; }
+
+.rl-problem-points h3 { font-size: 22px; font-weight: 600; line-height: 1.25; letter-spacing: -0.02em; }
+
+.rl-problem-points p { font-size: 16px; line-height: 1.55; color: var(--body); }
+
+.rl-problem-bridge {
+  margin-top: 56px;
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .rl-problem-points { grid-template-columns: 1fr; gap: 28px; margin-top: 40px; }
+  .rl-problem-bridge { margin-top: 40px; }
+}
