@@ -309,7 +309,7 @@ function Status({ status, dirty }) {
   if (status.kind === 'saving') text = 'Saving to GitHub…'
   if (status.kind === 'deploying') [text, cls] = ['Saved. Publishing to the site…', 'is-busy']
   if (status.kind === 'live') [text, cls] = ['Live on the site', 'is-ok']
-  if (status.kind === 'slow') [text, cls] = ['Saved to GitHub, not live yet', 'is-dirty']
+  if (status.kind === 'slow') [text, cls] = ['Saved to GitHub, but the site didn’t rebuild. Check Vercel → longrun → Settings → Git is connected to spokofyev/longrun.', 'is-dirty']
   if (status.kind === 'error') [text, cls] = ['Not saved', 'is-error']
   if (dirty && (status.kind === 'live' || status.kind === 'deploying' || status.kind === 'slow')) {
     text = 'Unsaved changes'
