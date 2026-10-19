@@ -146,7 +146,6 @@ function Products() {
             {i === 0 && <CardGlow />}
             <p className="client-label">{p.label}</p>
             <h3 className="client-problem">{p.problem}</h3>
-            <p className="client-list-title">For example</p>
             <ul className="client-list">
               {p.items.map((it) => (
                 <li key={it}>{it}</li>
@@ -188,8 +187,7 @@ export default function RlEnvironments({ topBar }) {
 
       <main>
         <section className="container section">
-          <h2 className="section-title">Four properties define a production-grade RL environment</h2>
-          <p className="section-lead">These are product requirements, not benchmark decoration.</p>
+          <h2 className="section-title">A production-grade RL environment</h2>
           <ol className="rl-cards rl-cards-4">
             {properties.map((p, i) => (
               <li key={p.title} className="rl-card">

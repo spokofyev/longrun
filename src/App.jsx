@@ -14,23 +14,9 @@ function Arrow() {
   )
 }
 
-function Logo({ inverted = false }) {
+function Brand() {
   return (
-    <svg className="logo" viewBox="0 0 100 100" aria-hidden="true">
-      <circle cx="50" cy="50" r="50" fill={inverted ? '#fff' : '#0a0a0a'} />
-      <rect x="24" y="24" width="52" height="52" fill={inverted ? '#0a0a0a' : '#fff'} />
-    </svg>
-  )
-}
-
-function Brand({ inverted = false }) {
-  return (
-    <a className="brand" href={SPV} aria-label="SPV Ventures">
-      <Logo inverted={inverted} />
-      SPV Ventures
-      <span className="brand-sep" aria-hidden="true">
-        |
-      </span>
+    <a className="brand" href="/" aria-label="Longrun home">
       Longrun
     </a>
   )
@@ -39,7 +25,7 @@ function Brand({ inverted = false }) {
 function TopBar() {
   return (
     <div className="hero-top">
-      <Brand inverted />
+      <Brand />
       <a className="hero-link" href="#contact">
         Contact
       </a>
@@ -138,10 +124,7 @@ function Footer() {
           <ContactForm />
         </div>
         <div className="footer-bottom">
-          <span className="footer-brand">
-            <Logo inverted />
-            <span>© {new Date().getFullYear()} Longrun</span>
-          </span>
+          <span className="footer-brand">© {new Date().getFullYear()} Longrun</span>
           <span className="footer-links">
             <a href={SPV}>SPV Ventures</a>
             <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
