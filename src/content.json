@@ -246,22 +246,18 @@
   ],
   "contact": {
     "title": "Request a sample dataset.",
-    "subtitle": "Tell us about your agents and the work they need to do. We’ll reply personally.",
+    "subtitle": "Tell us about your agents and the work they need to do.",
     "email": "prokofiev.sv@gmail.com",
     "nameLabel": "Full name",
     "emailLabel": "Email",
     "companyLabel": "Company",
     "messageLabel": "What your agents need to do",
-    "messagePlaceholder": "The agents you’re training, the work they need to do, and what you’d like in a sample.",
+    "messagePlaceholder": "A brief description of what you are trying to achieve",
     "button": "Send"
   },
   "footer": {
-    "copyright": "Longrun",
+    "copyright": "Longrun AI",
     "links": [
-      {
-        "title": "SPV Ventures",
-        "body": "https://spvventures.co"
-      },
       {
         "title": "LinkedIn",
         "body": "https://linkedin.com/in/sprokofyev"
