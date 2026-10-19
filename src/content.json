@@ -1,0 +1,188 @@
+{
+  "site": {
+    "brand": "Longrun",
+    "navLink": "Contact",
+    "title": "Longrun · RL environments for AI agents",
+    "description": "Synthetic RL environments for personal agents and AI employees — realistic, dynamic, business-specific, and hard to game."
+  },
+  "hero": {
+    "title": "Train AI agents inside the work they will actually do.",
+    "subtitle": "Synthetic RL environments for personal agents and AI employees — realistic, dynamic, business-specific, and hard to game.",
+    "cta": "Request sample dataset"
+  },
+  "sections": [
+    {
+      "id": "properties",
+      "type": "properties",
+      "hidden": false,
+      "title": "A production-grade RL environment",
+      "items": [
+        {
+          "title": "Realistic + complex",
+          "body": "Long-horizon workflows across apps, people, files and permissions.",
+          "tags": ["multi-app", "stateful", "30–100 steps"]
+        },
+        {
+          "title": "Non-stationary",
+          "body": "Events happen while the agent acts; data, users and policies evolve.",
+          "tags": ["event streams", "other actors", "changing state"]
+        },
+        {
+          "title": "Hard to hack",
+          "body": "Hidden ground truth, randomized worlds, held-out seeds and verifier ensembles.",
+          "tags": ["private state", "randomization", "adversarial QA"]
+        },
+        {
+          "title": "Built for business",
+          "body": "Custom workflows, domain policy, private data shapes, auditability and controls.",
+          "tags": ["workflow packs", "permissions", "enterprise API"]
+        }
+      ],
+      "footnote": "Design target: the model cannot win by memorizing patterns or exploiting one weak reward channel."
+    },
+    {
+      "id": "team",
+      "type": "team",
+      "hidden": false,
+      "title": "Research and engineering team who have built agent systems at Meta",
+      "items": [
+        "Author of the GAIA2 benchmark",
+        "Led agentic synthetic data and RL environments for Muse Glimmer",
+        "Work helped drive strong results on agentic benchmarks including WildClawBench and GAIA2",
+        "Deep experience in agents, RL, synthetic data, evaluation and benchmark design"
+      ]
+    },
+    {
+      "id": "product",
+      "type": "products",
+      "hidden": false,
+      "eyebrow": "The product",
+      "title": "Digital workplaces for agents",
+      "lead": "Not another static benchmark. A repeatable world where an agent must actually finish the job.",
+      "difficultyLabel": "Key difficulty",
+      "cards": [
+        {
+          "label": "Personal agent",
+          "problem": "Solve real daily-life problems",
+          "items": [
+            "Re-plan a trip when a flight is cancelled",
+            "Coordinate email, calendar, bookings and documents",
+            "Resolve a return / subscription / service issue",
+            "Research options, compare constraints and prepare the action"
+          ],
+          "difficulty": "The world changes while the agent is acting."
+        },
+        {
+          "label": "AI employee",
+          "problem": "Do professional work across systems",
+          "items": [
+            "Resolve a customer escalation across CRM + support + billing",
+            "Prepare a renewal using account history, docs and internal chat",
+            "Triage an incident, coordinate owners and update the runbook",
+            "Execute finance / operations / legal workflows with policy constraints"
+          ],
+          "difficulty": "Success means correct side effects, not a plausible answer."
+        }
+      ]
+    },
+    {
+      "id": "scenario",
+      "type": "scenario",
+      "hidden": false,
+      "eyebrow": "Sample scenario",
+      "title": "A customer escalation is a long-horizon task",
+      "lead": "One environment can force 30–60+ decisions across systems, people, policies and evolving state.",
+      "taskLabel": "Task",
+      "task": "Resolve the escalation, preserve the account, follow policy, and leave every system consistent.",
+      "systems": ["Inbox", "Support", "CRM", "Billing", "Internal chat", "Customer"],
+      "eventsLabel": "While the agent is working…",
+      "events": [
+        { "title": "New customer reply", "body": "details change midway" },
+        { "title": "Policy update", "body": "refund limit changes" },
+        { "title": "Record conflict", "body": "CRM and billing disagree" },
+        { "title": "Permission failure", "body": "agent needs an alternative path" }
+      ],
+      "note": "The agent must read, decide, message, update records, trigger actions, recover from failures and verify the result.",
+      "successLabel": "Success only if",
+      "success": [
+        { "title": "Outcome", "body": "customer issue actually resolved" },
+        { "title": "State", "body": "CRM / billing / ticket state consistent" },
+        { "title": "Policy", "body": "business rules followed" },
+        { "title": "Safety", "body": "no unintended side effect" }
+      ]
+    },
+    {
+      "id": "factory",
+      "type": "factory",
+      "hidden": false,
+      "title": "Environment factory: from a business process to trainable worlds",
+      "lead": "Every environment ships as a self-contained, resettable unit with its own state, events, tasks and verifiers.",
+      "steps": [
+        { "title": "Workflow spec", "body": "What the employee actually does" },
+        { "title": "World generator", "body": "Org graph, accounts, files, histories, policies" },
+        { "title": "Tool layer", "body": "CRM, email, docs, tickets, browser, DB, APIs" },
+        { "title": "Task + event engine", "body": "Hidden goals, difficulty, interrupts, other actors" },
+        { "title": "Verifier stack", "body": "Outcome + state + artifact + policy checks" },
+        { "title": "Adversarial QA", "body": "Rollouts, exploit mining, regression tests" }
+      ],
+      "defineTitle": "What counts as 1 environment?",
+      "parts": [
+        "seeded world",
+        "persistent state",
+        "tool suite",
+        "event stream",
+        "task family",
+        "verifier",
+        "reset function",
+        "train/eval split"
+      ],
+      "defineNote": "One world can generate many fresh episodes without manually labeling every trajectory."
+    },
+    {
+      "id": "pack",
+      "type": "pack",
+      "hidden": false,
+      "eyebrow": "The first product we ship",
+      "title": "Environment Pack v1",
+      "lead": "200 production-ready environments in 8 weeks. Start narrow, prove quality, then scale the factory.",
+      "packLabel": "Environment Pack v1",
+      "big": "200",
+      "bigLabel": "high-quality environments",
+      "includesLabel": "Every environment includes",
+      "includes": [
+        "realistic multi-system world state",
+        "non-stationary event schedules",
+        "task families, not single prompts",
+        "hard-to-game verifier stack",
+        "automatic resets + train/eval seeds"
+      ],
+      "scaleTitle": "Why 200 worlds can create much more than 200 examples",
+      "scale": [
+        { "title": "200", "body": "worlds" },
+        { "title": "× 50", "body": "task variants" },
+        { "title": "× 10", "body": "event schedules" },
+        { "title": "≈ 100k", "body": "distinct episodes" }
+      ],
+      "scaleCaveat": "Illustrative scale — actual episode count depends on task depth and QA gates.",
+      "scaleNote": "The scaling unit is the world generator, not the annotation workforce."
+    }
+  ],
+  "contact": {
+    "title": "Request a sample dataset.",
+    "subtitle": "Tell us about your agents and the work they need to do. We’ll reply personally.",
+    "email": "prokofiev.sv@gmail.com",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "companyLabel": "Company",
+    "messageLabel": "What your agents need to do",
+    "messagePlaceholder": "The agents you’re training, the work they need to do, and what you’d like in a sample.",
+    "button": "Send"
+  },
+  "footer": {
+    "copyright": "Longrun",
+    "links": [
+      { "title": "SPV Ventures", "body": "https://spvventures.co" },
+      { "title": "LinkedIn", "body": "https://linkedin.com/in/sprokofyev" }
+    ]
+  }
+}
