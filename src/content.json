@@ -12,47 +12,6 @@
   },
   "sections": [
     {
-      "id": "properties",
-      "type": "properties",
-      "hidden": false,
-      "title": "A production-grade RL environment",
-      "items": [
-        {
-          "title": "Realistic + complex",
-          "body": "Long-horizon workflows across apps, people, files and permissions.",
-          "tags": ["multi-app", "stateful", "30–100 steps"]
-        },
-        {
-          "title": "Non-stationary",
-          "body": "Events happen while the agent acts; data, users and policies evolve.",
-          "tags": ["event streams", "other actors", "changing state"]
-        },
-        {
-          "title": "Hard to hack",
-          "body": "Hidden ground truth, randomized worlds, held-out seeds and verifier ensembles.",
-          "tags": ["private state", "randomization", "adversarial QA"]
-        },
-        {
-          "title": "Built for business",
-          "body": "Custom workflows, domain policy, private data shapes, auditability and controls.",
-          "tags": ["workflow packs", "permissions", "enterprise API"]
-        }
-      ],
-      "footnote": "Design target: the model cannot win by memorizing patterns or exploiting one weak reward channel."
-    },
-    {
-      "id": "team",
-      "type": "team",
-      "hidden": false,
-      "title": "Research and engineering team who have built agent systems at Meta",
-      "items": [
-        "Author of the GAIA2 benchmark",
-        "Led agentic synthetic data and RL environments for Muse Glimmer",
-        "Work helped drive strong results on agentic benchmarks including WildClawBench and GAIA2",
-        "Deep experience in agents, RL, synthetic data, evaluation and benchmark design"
-      ]
-    },
-    {
       "id": "product",
       "type": "products",
       "hidden": false,
@@ -86,30 +45,49 @@
       ]
     },
     {
-      "id": "scenario",
-      "type": "scenario",
+      "id": "properties",
+      "type": "properties",
       "hidden": false,
-      "eyebrow": "Sample scenario",
-      "title": "A customer escalation is a long-horizon task",
-      "lead": "One environment can force 30–60+ decisions across systems, people, policies and evolving state.",
-      "taskLabel": "Task",
-      "task": "Resolve the escalation, preserve the account, follow policy, and leave every system consistent.",
-      "systems": ["Inbox", "Support", "CRM", "Billing", "Internal chat", "Customer"],
-      "eventsLabel": "While the agent is working…",
-      "events": [
-        { "title": "New customer reply", "body": "details change midway" },
-        { "title": "Policy update", "body": "refund limit changes" },
-        { "title": "Record conflict", "body": "CRM and billing disagree" },
-        { "title": "Permission failure", "body": "agent needs an alternative path" }
+      "title": "A production-grade RL environment",
+      "items": [
+        {
+          "title": "Realistic + complex",
+          "body": "Long-horizon workflows across apps, people, files and permissions.",
+          "tags": [
+            "multi-app",
+            "stateful",
+            "30–100 steps"
+          ]
+        },
+        {
+          "title": "Non-stationary",
+          "body": "Events happen while the agent acts; data, users and policies evolve.",
+          "tags": [
+            "event streams",
+            "other actors",
+            "changing state"
+          ]
+        },
+        {
+          "title": "Hard to hack",
+          "body": "Hidden ground truth, randomized worlds, held-out seeds and verifier ensembles.",
+          "tags": [
+            "private state",
+            "randomization",
+            "adversarial QA"
+          ]
+        },
+        {
+          "title": "Built for business",
+          "body": "Custom workflows, domain policy, private data shapes, auditability and controls.",
+          "tags": [
+            "workflow packs",
+            "permissions",
+            "enterprise API"
+          ]
+        }
       ],
-      "note": "The agent must read, decide, message, update records, trigger actions, recover from failures and verify the result.",
-      "successLabel": "Success only if",
-      "success": [
-        { "title": "Outcome", "body": "customer issue actually resolved" },
-        { "title": "State", "body": "CRM / billing / ticket state consistent" },
-        { "title": "Policy", "body": "business rules followed" },
-        { "title": "Safety", "body": "no unintended side effect" }
-      ]
+      "footnote": "Design target: the model cannot win by memorizing patterns or exploiting one weak reward channel."
     },
     {
       "id": "factory",
@@ -118,12 +96,30 @@
       "title": "Environment factory: from a business process to trainable worlds",
       "lead": "Every environment ships as a self-contained, resettable unit with its own state, events, tasks and verifiers.",
       "steps": [
-        { "title": "Workflow spec", "body": "What the employee actually does" },
-        { "title": "World generator", "body": "Org graph, accounts, files, histories, policies" },
-        { "title": "Tool layer", "body": "CRM, email, docs, tickets, browser, DB, APIs" },
-        { "title": "Task + event engine", "body": "Hidden goals, difficulty, interrupts, other actors" },
-        { "title": "Verifier stack", "body": "Outcome + state + artifact + policy checks" },
-        { "title": "Adversarial QA", "body": "Rollouts, exploit mining, regression tests" }
+        {
+          "title": "Workflow spec",
+          "body": "What the employee actually does"
+        },
+        {
+          "title": "World generator",
+          "body": "Org graph, accounts, files, histories, policies"
+        },
+        {
+          "title": "Tool layer",
+          "body": "CRM, email, docs, tickets, browser, DB, APIs"
+        },
+        {
+          "title": "Task + event engine",
+          "body": "Hidden goals, difficulty, interrupts, other actors"
+        },
+        {
+          "title": "Verifier stack",
+          "body": "Outcome + state + artifact + policy checks"
+        },
+        {
+          "title": "Adversarial QA",
+          "body": "Rollouts, exploit mining, regression tests"
+        }
       ],
       "defineTitle": "What counts as 1 environment?",
       "parts": [
@@ -158,13 +154,94 @@
       ],
       "scaleTitle": "Why 200 worlds can create much more than 200 examples",
       "scale": [
-        { "title": "200", "body": "worlds" },
-        { "title": "× 50", "body": "task variants" },
-        { "title": "× 10", "body": "event schedules" },
-        { "title": "≈ 100k", "body": "distinct episodes" }
+        {
+          "title": "200",
+          "body": "worlds"
+        },
+        {
+          "title": "× 50",
+          "body": "task variants"
+        },
+        {
+          "title": "× 10",
+          "body": "event schedules"
+        },
+        {
+          "title": "≈ 100k",
+          "body": "distinct episodes"
+        }
       ],
       "scaleCaveat": "Illustrative scale — actual episode count depends on task depth and QA gates.",
       "scaleNote": "The scaling unit is the world generator, not the annotation workforce."
+    },
+    {
+      "id": "scenario",
+      "type": "scenario",
+      "hidden": false,
+      "eyebrow": "Sample scenario",
+      "title": "A customer escalation is a long-horizon task",
+      "lead": "One environment can force 30–60+ decisions across systems, people, policies and evolving state.",
+      "taskLabel": "Task",
+      "task": "Resolve the escalation, preserve the account, follow policy, and leave every system consistent.",
+      "systems": [
+        "Inbox",
+        "Support",
+        "CRM",
+        "Billing",
+        "Internal chat",
+        "Customer"
+      ],
+      "eventsLabel": "While the agent is working…",
+      "events": [
+        {
+          "title": "New customer reply",
+          "body": "details change midway"
+        },
+        {
+          "title": "Policy update",
+          "body": "refund limit changes"
+        },
+        {
+          "title": "Record conflict",
+          "body": "CRM and billing disagree"
+        },
+        {
+          "title": "Permission failure",
+          "body": "agent needs an alternative path"
+        }
+      ],
+      "note": "The agent must read, decide, message, update records, trigger actions, recover from failures and verify the result.",
+      "successLabel": "Success only if",
+      "success": [
+        {
+          "title": "Outcome",
+          "body": "customer issue actually resolved"
+        },
+        {
+          "title": "State",
+          "body": "CRM / billing / ticket state consistent"
+        },
+        {
+          "title": "Policy",
+          "body": "business rules followed"
+        },
+        {
+          "title": "Safety",
+          "body": "no unintended side effect"
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "type": "team",
+      "hidden": false,
+      "title": "Research and engineering team who have built agent systems at Meta",
+      "items": [
+        "Author of the GAIA2 benchmark",
+        "Led agentic synthetic data and RL environments for Muse Glimmer",
+        "Work helped drive strong results on agentic benchmarks including WildClawBench and GAIA2",
+        "Deep experience in agents, RL, synthetic data, evaluation and benchmark design"
+      ]
     }
   ],
   "contact": {
@@ -181,8 +258,14 @@
   "footer": {
     "copyright": "Longrun",
     "links": [
-      { "title": "SPV Ventures", "body": "https://spvventures.co" },
-      { "title": "LinkedIn", "body": "https://linkedin.com/in/sprokofyev" }
+      {
+        "title": "SPV Ventures",
+        "body": "https://spvventures.co"
+      },
+      {
+        "title": "LinkedIn",
+        "body": "https://linkedin.com/in/sprokofyev"
+      }
     ]
   }
 }
